@@ -1,0 +1,923 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: #651d1d;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff1dc,
+            #ffd6a5,
+            #ffb4a2,
+            #ffc8dd
+        );
+
+    background-size: 400% 400%;
+
+    animation: backgroundMove 12s ease infinite;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+
+    text-align: center;
+
+}
+
+
+/* =====================
+   NEW RAKHI DESIGN
+===================== */
+
+.rakhi-design {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.rakhi-thread {
+
+    width: 180px;
+
+    height: 8px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            #c1121f 0px,
+            #c1121f 12px,
+            #fcbf49 12px,
+            #fcbf49 24px
+        );
+
+    border-radius: 20px;
+
+}
+
+
+.rakhi-center {
+
+    width: 110px;
+
+    height: 110px;
+
+    border-radius: 50%;
+
+    padding: 8px;
+
+    background:
+        conic-gradient(
+            #c1121f,
+            #fcbf49,
+            #ff758f,
+            #c1121f
+        );
+
+    box-shadow:
+        0 10px 30px rgba(150, 30, 30, 0.25);
+
+    animation: rakhiRotate 6s linear infinite;
+
+}
+
+
+.rakhi-inner {
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #fff4e6;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 45px;
+
+}
+
+
+/* =====================
+   TITLES
+===================== */
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    font-size: 65px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.1;
+
+}
+
+
+h1 span {
+
+    display: block;
+
+    color: #b5173f;
+
+}
+
+
+/* =====================
+   MESSAGE CARD
+===================== */
+
+.message-card {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 20px 50px rgba(100,30,30,0.15);
+
+}
+
+
+.card-decoration {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.message-card h2 {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.intro-text {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================
+   SISTERS
+===================== */
+
+.sisters-section {
+
+    margin-top: 60px;
+
+}
+
+
+.sisters-section > h2 {
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.sisters-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+
+}
+
+
+.sister-card {
+
+    padding: 25px 15px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.60);
+
+    box-shadow:
+        0 10px 30px rgba(100,30,30,0.12);
+
+    transition: 0.3s ease;
+
+}
+
+
+.sister-card:hover {
+
+    transform:
+        translateY(-10px);
+
+}
+
+
+.sister-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff;
+
+    font-size: 35px;
+
+}
+
+
+.sister-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.sister-card p {
+
+    font-size: 13px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =====================
+   BUTTON
+===================== */
+
+#surpriseBtn {
+
+    margin-top: 50px;
+
+    border: none;
+
+    padding: 18px 32px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c1121f,
+            #ff4d6d
+        );
+
+    box-shadow:
+        0 10px 25px rgba(193,18,31,0.30);
+
+    transition: 0.3s ease;
+
+}
+
+
+#surpriseBtn:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+}
+
+
+/* =====================
+   SURPRISE BOX
+===================== */
+
+.surprise-box {
+
+    display: none;
+
+    max-width: 700px;
+
+    margin: 35px auto;
+
+    padding: 45px 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.70);
+
+    box-shadow:
+        0 20px 50px rgba(100,30,30,0.15);
+
+}
+
+
+.surprise-box.show {
+
+    display: block;
+
+    animation: showBox 0.8s ease;
+
+}
+
+
+.big-rakhi {
+
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.surprise-box h2 {
+
+    margin-bottom: 20px;
+
+    font-size: 30px;
+
+}
+
+
+.surprise-box p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+
+}
+
+
+.surprise-box h3 {
+
+    margin-top: 25px;
+
+    font-size: 24px;
+
+    color: #b5173f;
+
+}
+
+
+/* =====================
+   FROM SECTION
+===================== */
+
+.from-section {
+
+    margin-top: 60px;
+
+}
+
+
+.from-section p {
+
+    font-size: 16px;
+
+}
+
+
+.from-section h2 {
+
+    margin-top: 10px;
+
+    font-size: 40px;
+
+    color: #b5173f;
+
+}
+
+
+.from-rakhi {
+
+    font-size: 55px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+
+    margin-top: 50px;
+
+    font-size: 14px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =====================
+   FLOATING ITEMS
+===================== */
+
+.floating-items span {
+
+    position: fixed;
+
+    bottom: -60px;
+
+    font-size: 28px;
+
+    pointer-events: none;
+
+    animation:
+        floatUp linear infinite;
+
+}
+
+
+.floating-items span:nth-child(1) {
+
+    left: 5%;
+    animation-duration: 8s;
+
+}
+
+
+.floating-items span:nth-child(2) {
+
+    left: 20%;
+    animation-duration: 11s;
+
+    animation-delay: 2s;
+
+}
+
+
+.floating-items span:nth-child(3) {
+
+    left: 40%;
+    animation-duration: 9s;
+
+}
+
+
+.floating-items span:nth-child(4) {
+
+    left: 60%;
+    animation-duration: 12s;
+
+    animation-delay: 1s;
+
+}
+
+
+.floating-items span:nth-child(5) {
+
+    left: 80%;
+    animation-duration: 10s;
+
+}
+
+
+.floating-items span:nth-child(6) {
+
+    left: 95%;
+    animation-duration: 7s;
+
+}
+
+
+/* =====================
+   ANIMATIONS
+===================== */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+@keyframes rakhiRotate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-115vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes showBox {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================
+   MOBILE
+===================== */
+
+@media (max-width: 900px) {
+
+    .sisters-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+
+        padding: 40px 15px;
+
+    }
+
+
+    .rakhi-thread {
+
+        width: 70px;
+
+    }
+
+
+    .rakhi-center {
+
+        width: 85px;
+
+        height: 85px;
+
+    }
+
+
+    h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .sisters-section > h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .sisters-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+
+    .sister-card {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .message-card {
+
+        padding: 30px 20px;
+
+    }
+
+
+    .intro-text {
+
+        font-size: 16px;
+
+    }
+
+
+    #surpriseBtn {
+
+        width: 100%;
+
+    }
+
+
+    .from-section h2 {
+
+        font-size: 32px;
+
+    }
+
+}
+
+/* =====================================
+   SISTER PHOTO FRAME
+===================================== */
+
+.photo-frame {
+
+    width: 130px;
+    height: 130px;
+
+    margin: 0 auto 18px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c1121f,
+            #fcbf49,
+            #ff758f
+        );
+
+    box-shadow:
+        0 10px 25px rgba(120, 20, 20, 0.25);
+
+    overflow: hidden;
+
+    transition: 0.4s ease;
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+
+.sister-card:hover .photo-frame {
+
+    transform:
+        rotate(5deg)
+        scale(1.08);
+
+}
+
+
+/* =====================================
+   TIRTHA PHOTO
+===================================== */
+
+.tirtha-photo-frame {
+
+    width: 170px;
+    height: 170px;
+
+    margin: 20px auto;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c1121f,
+            #fcbf49,
+            #ff758f
+        );
+
+    box-shadow:
+        0 15px 40px rgba(120, 20, 20, 0.30);
+
+    animation:
+        photoGlow 3s ease-in-out infinite;
+
+}
+
+
+.tirtha-photo-frame img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+
+.brother-text {
+
+    font-size: 16px;
+
+    margin-top: 8px;
+
+    opacity: 0.8;
+
+}
+
+
+.love-text {
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================
+   PHOTO GLOW ANIMATION
+===================================== */
+
+@keyframes photoGlow {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE PHOTO SIZE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .photo-frame {
+
+        width: 105px;
+        height: 105px;
+
+    }
+
+
+    .tirtha-photo-frame {
+
+        width: 140px;
+        height: 140px;
+
+    }
+
+}
